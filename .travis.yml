@@ -1,0 +1,7 @@
+language: java
+jdk:
+  - openjdk7
+script:
+  - javac -cp .:/usr/share/java/junit.jar Calculator.java CalculatorTest.java
+after_success:
+  - java -cp .:/usr/share/java/junit.jar org.junit.runner.JUnitCore CalculatorTest
